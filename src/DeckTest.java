@@ -30,4 +30,11 @@ public class DeckTest extends TestCase {
     }
     assertFalse(a.hasNext());
   }
+  public void testSet(){
+    Deck setCards = new Deck("someCards.dat");
+    Card c1 = setCards.getNext();
+    Card c2 = setCards.getNext();
+    Card c3 = setCards.getNext();
+    assertTrue(c1.isSet(c2,c3));
+  }
 }
