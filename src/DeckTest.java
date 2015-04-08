@@ -15,10 +15,23 @@ public class DeckTest extends TestCase {
    */
   public void testFullDeck() {
     Deck a = new Deck();
+    int qSum = 0;
+    int cSum = 0;
+    int tSum = 0;
+    int sSum = 0;
     for(int i = 0; i < 81; i++)
     {
       Card b = a.getNext();
+      qSum += b.getQuantity();
+      cSum += b.getColor();
+      tSum += b.getShading();
+      sSum += b.getShape();
+      
     }
+    assertEquals(162 , qSum);
+    assertEquals(162 , cSum);
+    assertEquals(162 , tSum);
+    assertEquals(162 , sSum);
     assertFalse(a.hasNext());
   }
   
