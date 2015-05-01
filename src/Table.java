@@ -3,7 +3,8 @@ public class Table{
   private int numCards;
   
   public Table(){
-    
+    head = null;
+    numCards = 0;
   }
   public void add(Card c){
     TableNode newNode = new TableNode(c);
